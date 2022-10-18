@@ -179,8 +179,8 @@ print("""Kalkulator umożliwia następujące operacje na liczbach, aby je wykona
 # (pierwiastkowanie)
 x (losowanie liczby z zakresu)""")
 
-liczba1 = int(input("Podaj pierwszą liczbę: "))
-liczba2 = int(input("Podaj drugą liczbę: "))
+liczba1 = float(input("Podaj pierwszą liczbę: "))
+liczba2 = float(input("Podaj drugą liczbę: "))
 request = "T"
 
 while request == "T":
@@ -195,22 +195,32 @@ while request == "T":
         iloczyn = liczba1 * liczba2
         print(iloczyn)
     elif wybor == "/":
-        iloraz = liczba1 / liczba2
-        print(iloraz)
+        if liczba2 != 0:
+            iloraz = liczba1 / liczba2
+            print(iloraz)
+        else:
+            print("Nie dziel przez zero!")
     elif wybor == "^":
         potegowanie = liczba1 ** liczba2
         print(potegowanie)
     elif wybor == "#":
-        pierwiastkowanie = liczba1 ** (1 / liczba2)
-        print(pierwiastkowanie)
+        if liczba1 > 0 and liczba2 != 0:
+            pierwiastkowanie = liczba1 ** (1 / liczba2)
+            print(pierwiastkowanie)
+        else:
+            print("Nieprawidłowe dane wejściowe!")
     elif wybor == "x":
-        losowanie = random.randint(liczba1, liczba2)
-        print(losowanie)
+        if liczba1 > liczba2:
+            losowanie = random.randint(int(liczba2), int(liczba1))
+            print(losowanie)
+        else:
+            losowanie = random.randint(int(liczba1), int(liczba2))
+            print(losowanie)
     else:
         print("Nieprawidłowy znak operacji")
     request = input("Czy chcesz wprowadzić nowe dane?")
     if request == "T":
-        liczba1 = int(input("Podaj pierwszą liczbę: "))
-        liczba2 = int(input("Podaj drugą liczbę: "))
+        liczba1 = float(input("Podaj pierwszą liczbę: "))
+        liczba2 = float(input("Podaj drugą liczbę: "))
     elif request == "N":
         break
