@@ -42,7 +42,7 @@ print("Szymon", "Szkarłat", 19, "spaghetti", "pies", (5 / 7).__round__(1), (5 /
       (5 / 7).__round__(10))
 
 # zadanie5
-number = int(input("Poja liczbę: "))
+number = int(input("Podaj liczbę: "))
 print("Wprowadzona przez Ciebie liczba to", number)
 
 
@@ -136,17 +136,21 @@ from enum import IntEnum
 saldo = 1000
 PIN = '1111'
 
-PINuzytkownika = input("Podaj PIN: ")
+Operacje_na_koncie = IntEnum('Operacje_na_koncie', 'Wpłata Wypłata Sprawdzenie_salda')
 
-if PINuzytkownika == PIN:
-    wybor = int(input("""Co chcesz wykonać na swoim koncie:
+wybor = int(input("""Co chcesz wykonać na swoim koncie:
 1. wpłata
 2. wypłata
 3. sparawdzenie salda
 Zakończenie odbywa się poprzez użycie numeru innego niż wyżej wymienione
 """))
-    Operacje_na_koncie = IntEnum('Operacje_na_koncie', 'Wpłata Wypłata Sprawdzenie_salda')
-    while True:
+PINuzytkownika = input("Podaj PIN: ")
+
+while True:
+    if PINuzytkownika != PIN:
+        print("Niepoprawny PIN!")
+        PINuzytkownika = input("Podaj PIN: ")
+    else:
         if wybor == Operacje_na_koncie.Wpłata:
             kwotaDoWplaty = int(input("Podaj kwote jaką chcesz wpłacić na swoje konto: "))
             saldo += kwotaDoWplaty
@@ -164,8 +168,6 @@ Zakończenie odbywa się poprzez użycie numeru innego niż wyżej wymienione
         else:
             break
         wybor = int(input("Co chcesz zrobić w kolejnym kroku?"))
-else:
-    print("Nieprawidłowy PIN!")
 
 # zadanie10
 import random
