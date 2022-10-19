@@ -125,10 +125,15 @@ else:
 # zadanie8
 def holiday_bush(number):
     for i in range(number):
-        print(' ' * (number - (i + 1)), '*' * (2 * i + 1))
+        if i == 0:
+            print(' ' * (number - i - 1), 'X' * (2 * i + 1))
+        else:
+            print(' ' * (number - i - 1), '*' * (2 * i + 1))
+    print(' ' * (number - 1), 'U')
 
 
-holiday_bush(5)
+request = int(input("Podaj jakiej wysokości ma być choinka: "))  # Wprowadzona liczba ma być całkowita, nieujemna
+holiday_bush(request)
 
 # zadanie9
 from enum import IntEnum
