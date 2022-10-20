@@ -71,28 +71,34 @@ def pierwiastkowanie(number1, number2):
     return number1 ** 0.5, number2 ** 0.5
 
 
-pierwszaLiczba = int(input("Podaj pierwszą liczbę: "))
-drugaLiczba = int(input("Podaj drugą liczbę: "))
+"""
+Najpierw prosimy użytkownika o podanie liczb
+Są one typu float, tak aby była możliwość zapisania liczb zmiennoprzecinkowych
+Liczby zmiennoprzecinkowe to liczby nie całkowite (liczby całkowite - typ int)
+"""
+
+pierwszaLiczba = float(input("Podaj pierwszą liczbę: "))
+drugaLiczba = float(input("Podaj drugą liczbę: "))
 if pierwszaLiczba < 0 and drugaLiczba < 0:
-    print("Obie liczby są ujemne")
+    print("Obie liczby są ujemne")  # Jeśli użytkownik poda dwie liczby ujemne otrzyma komunikat
     exit()
 elif pierwszaLiczba < 0:
-    modulPierwszejLiczby = abs(pierwszaLiczba)
+    modulPierwszejLiczby = abs(pierwszaLiczba)  # Sposób uzyskania wartości bezwzględnej z pierwszej podanej liczby
     print("Wynik dodawania:", dodawanie(modulPierwszejLiczby, drugaLiczba))
     print("Wynik odejmowania:", odejmowanie(modulPierwszejLiczby, drugaLiczba))
     print("Wynik mnożenia:", mnozenie(modulPierwszejLiczby, drugaLiczba))
     if mnozenie(modulPierwszejLiczby, drugaLiczba) == 10:
-        print("Yay!")
+        print("Yay!")  # Jeżeli wynik mnożenia jest równy 10 to użytkownik otrzyma komunikat "Yay!"
     print("Wynik dzielenia:", dzielenie(modulPierwszejLiczby, drugaLiczba))
     print("Kwadrat obu liczb:", potegowanie(modulPierwszejLiczby, drugaLiczba))
     print("Pierwiastek obu liczb:", pierwiastkowanie(modulPierwszejLiczby, drugaLiczba))
 elif drugaLiczba < 0:
-    modulDrugaLiczba = abs(drugaLiczba)
+    modulDrugaLiczba = abs(drugaLiczba)  # Sposób uzyskania wartości bezwzględnej z drugiej podanej liczby
     print("Wynik dodawania:", dodawanie(pierwszaLiczba, modulDrugaLiczba))
     print("Wynik odejmowania:", odejmowanie(pierwszaLiczba, modulDrugaLiczba))
     print("Wynik mnożenia:", mnozenie(pierwszaLiczba, modulDrugaLiczba))
     if mnozenie(pierwszaLiczba, modulDrugaLiczba) == 10:
-        print("Yay!")
+        print("Yay!")  # Jeżeli wynik mnożenia jest równy 10 to użytkownik otrzyma komunikat "Yay!"
     print("Wynik dzielenia:", dzielenie(pierwszaLiczba, modulDrugaLiczba))
     print("Kwadrat obu liczb:", potegowanie(pierwszaLiczba, modulDrugaLiczba))
     print("Pierwiastek obu liczb:", pierwiastkowanie(pierwszaLiczba, modulDrugaLiczba))
@@ -101,7 +107,7 @@ else:
     print("Wynik odejmowania:", odejmowanie(pierwszaLiczba, drugaLiczba))
     print("Wynik mnożenia:", mnozenie(pierwszaLiczba, drugaLiczba))
     if mnozenie(pierwszaLiczba, drugaLiczba) == 10:
-        print("Yay!")
+        print("Yay!")  # Jeżeli wynik mnożenia jest równy 10 to użytkownik otrzyma komunikat "Yay!"
     print("Wynik dzielenia:", dzielenie(pierwszaLiczba, drugaLiczba))
     print("Kwadrat obu liczb:", potegowanie(pierwszaLiczba, drugaLiczba))
     print("Pierwiastek obu liczb:", pierwiastkowanie(pierwszaLiczba, drugaLiczba))
@@ -141,17 +147,19 @@ from enum import IntEnum
 saldo = 1000
 PIN = '1111'
 
-Operacje_na_koncie = IntEnum('Operacje_na_koncie', 'Wpłata Wypłata Sprawdzenie_salda')
+Operacje_na_koncie = IntEnum('Operacje_na_koncie', 'Wpłata Wypłata Sprawdzenie_salda Zakończenie')
 
 wybor = int(input("""Co chcesz wykonać na swoim koncie:
-1. wpłata
-2. wypłata
-3. sparawdzenie salda
-Zakończenie odbywa się poprzez użycie numeru innego niż wyżej wymienione
+1. wpłacić 
+2. wypłacić 
+3. sparawdzić saldo
+4. zakończyć użytkowanie
 """))
-PINuzytkownika = input("Podaj PIN: ")
 
 while True:
+    if wybor == Operacje_na_koncie.Zakończenie:
+        exit()
+    PINuzytkownika = input("Podaj PIN: ")
     if PINuzytkownika != PIN:
         print("Niepoprawny PIN!")
         PINuzytkownika = input("Podaj PIN: ")
@@ -170,8 +178,6 @@ while True:
                 print("Twój stan konta po tej transakcji to:", saldo)
         elif wybor == Operacje_na_koncie.Sprawdzenie_salda:
             print("Twój stan konta to:", saldo)
-        else:
-            break
         wybor = int(input("Co chcesz zrobić w kolejnym kroku?"))
 
 # zadanie10
