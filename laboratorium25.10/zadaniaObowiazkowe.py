@@ -152,17 +152,16 @@ Operacje_na_koncie = IntEnum('Operacje_na_koncie', 'Wpłata Wypłata Sprawdzenie
 wybor = int(input("""Co chcesz wykonać na swoim koncie:
 1. wpłacić 
 2. wypłacić 
-3. sparawdzić saldo
+3. sprawdzić saldo
 4. zakończyć użytkowanie
 """))
 
 while True:
     if wybor == Operacje_na_koncie.Zakończenie:
-        exit()
+        break
     PINuzytkownika = input("Podaj PIN: ")
     if PINuzytkownika != PIN:
         print("Niepoprawny PIN!")
-        PINuzytkownika = input("Podaj PIN: ")
     else:
         if wybor == Operacje_na_koncie.Wpłata:
             kwotaDoWplaty = int(input("Podaj kwote jaką chcesz wpłacić na swoje konto: "))
@@ -192,48 +191,48 @@ print("""Kalkulator umożliwia następujące operacje na liczbach, aby je wykona
 # (pierwiastkowanie)
 x (losowanie liczby z zakresu)""")
 
-liczba1 = float(input("Podaj pierwszą liczbę: "))
-liczba2 = float(input("Podaj drugą liczbę: "))
 request = "T"
 
-while request == "T":
-    wybor = input()  # Podanie znaku operacji na liczbach
-    if wybor == "+":
-        suma = liczba1 + liczba2
-        print(suma)
-    elif wybor == "-":
-        roznica = liczba1 - liczba2
-        print(roznica)
-    elif wybor == "*":
-        iloczyn = liczba1 * liczba2
-        print(iloczyn)
-    elif wybor == "/":
-        if liczba2 != 0:
-            iloraz = liczba1 / liczba2
-            print(iloraz)
-        else:
-            print("Nie dziel przez zero!")
-    elif wybor == "^":
-        potegowanie = liczba1 ** liczba2
-        print(potegowanie)
-    elif wybor == "#":
-        if liczba1 > 0 and liczba2 != 0:
-            pierwiastkowanie = liczba1 ** (1 / liczba2)
-            print(pierwiastkowanie)
-        else:
-            print("Nieprawidłowe dane wejściowe!")
-    elif wybor == "x":
-        if liczba1 > liczba2:
-            losowanie = random.randint(int(liczba2), int(liczba1))
-            print(losowanie)
-        else:
-            losowanie = random.randint(int(liczba1), int(liczba2))
-            print(losowanie)
-    else:
-        print("Nieprawidłowy znak operacji")
-    request = input("Czy chcesz wprowadzić nowe dane?")
+while True:
     if request == "T":
         liczba1 = float(input("Podaj pierwszą liczbę: "))
         liczba2 = float(input("Podaj drugą liczbę: "))
+        wybor = input()  # Podanie znaku operacji na liczbach
+        if wybor == "+":
+            suma = liczba1 + liczba2
+            print(suma)
+        elif wybor == "-":
+            roznica = liczba1 - liczba2
+            print(roznica)
+        elif wybor == "*":
+            iloczyn = liczba1 * liczba2
+            print(iloczyn)
+        elif wybor == "/":
+            if liczba2 != 0:
+                iloraz = liczba1 / liczba2
+                print(iloraz)
+            else:
+                print("Nie dziel przez zero!")
+        elif wybor == "^":
+            potegowanie = liczba1 ** liczba2
+            print(potegowanie)
+        elif wybor == "#":
+            if liczba1 > 0 and liczba2 != 0:
+                pierwiastkowanie = liczba1 ** (1 / liczba2)
+                print(pierwiastkowanie)
+            else:
+                print("Nieprawidłowe dane wejściowe!")
+        elif wybor == "x":
+            if liczba1 > liczba2:
+                losowanie = random.randint(int(liczba2), int(liczba1))
+                print(losowanie)
+            else:
+                losowanie = random.randint(int(liczba1), int(liczba2))
+                print(losowanie)
+        else:
+            print("Nieprawidłowy znak operacji")
+        request = input("Czy chcesz wprowadzić nowe dane?")    
     elif request == "N":
         break
+    else:
+        exit()
