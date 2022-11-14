@@ -37,7 +37,7 @@ def nieparzyste_czynniki_liczby(function, *arg):
         return True
 
 
-# Jest to rozwiązanie wolniejsze
+# Jest to rozwiązanie wolniejsze 
 # def nieparzyste_czynniki_liczby(function, *arg):
 #     nieparzysteCzynniki = []
 #     for element in function(*arg):
