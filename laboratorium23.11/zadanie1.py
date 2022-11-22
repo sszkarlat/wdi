@@ -39,7 +39,7 @@ def sumowanie_podzbiorow_listy():
     for liczba in lista:
         if liczba != 0:
             sumaLiczb += liczba
-        else:
+        elif sumaLiczb != 0: 
             sumyPodzbiorow.append(sumaLiczb)
             sumaLiczb = 0
 
