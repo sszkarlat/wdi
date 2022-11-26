@@ -45,7 +45,7 @@ def czy_kazdy_wiersz_zawiera_liczbe_z_wylacznie_cyframi_pierwszymi(tablicaDwuwym
         for liczba in wiersz:
             if pierwsze_czynniki_liczby(cyfry_liczby, liczba):
                 licznik += 1
-                print(f"pierwsza napotkana liczba w wierszu {tablicaDwuwymiarowa.index(wiersz)}: {liczba}")
+                print(f"pierwsza napotkana liczba w wierszu o indeksie {tablicaDwuwymiarowa.index(wiersz)}: {liczba}")
                 break
         if licznik == tablicaDwuwymiarowa.index(wiersz):
             break
