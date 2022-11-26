@@ -53,7 +53,7 @@ def czy_kazdy_wiersz_zawiera_liczbe_z_wylacznie_cyframi_pierwszymi(tablicaDwuwym
         return True, licznik
     else:
         return False, licznik
-
+ 
 
 while True:
     tablicaDwuwymiarowa = generowanie_tablicy_dwuwymiarowej(int(input("Podaj wielkość tablicy: ")))
