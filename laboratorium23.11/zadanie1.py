@@ -4,8 +4,9 @@ Napisz program, który utworzy i wypisze listę składającą się z N  liczb z 
 Następnie program powinien policzyć sumy podzbiorów znajdujących się pomiędzy zerami.
 Lista przed modyfikacją: [7, 45, 45, 34, 53, 45, 4, 3, 11, 18].
 Lista po modyfikacji: [7, 0, 45, 45, 34, 53, 0, 45, 4, 3, 0, 11, 0, 18].
-Wynik: 7; 177; 52; 11; 48. Wykorzystaj funkcje.
+Wynik: 7; 177; 52; 11; 18. Wykorzystaj funkcje.
 """
+
 import random
 
 
@@ -26,9 +27,9 @@ def generowanie_listy_nLiczbowej(N):
     return generatorLiczb
 
 
-def wstawianie_zera_do_listy(funckja):
-    for pozycja in range(len(lista)):
-        if funckja(lista[pozycja]):
+def wstawianie_zera_do_listy(listaLiczbPierwszych):
+    for pozycja in range(len(lista) + len(listaLiczbPierwszych)):
+        if lista[pozycja] in listaLiczbPierwszych:
             lista.insert(pozycja + 1, 0)
     return lista
 
@@ -39,11 +40,11 @@ def sumowanie_podzbiorow_listy():
     for liczba in lista:
         if liczba != 0:
             sumaLiczb += liczba
-        elif sumaLiczb != 0:  # Sprawdzamy czy zero nie wystąpi na początku, jeśli tak to nie dodajemy go do listy 
+            # print(sumaLiczb)
+        else:
             sumyPodzbiorow.append(sumaLiczb)
             sumaLiczb = 0
-
-    if sumaLiczb != 0:  # Sprawdzamy czy na końcu nie wystąpi zero, jeśli tak to nie dodajemy go do listy
+    if sumaLiczb != 0:
         sumyPodzbiorow.append(sumaLiczb)
 
     return sumyPodzbiorow
@@ -51,9 +52,16 @@ def sumowanie_podzbiorow_listy():
 
 while True:
     lista = generowanie_listy_nLiczbowej(int(input("Podaj ile liczb ma być w liście z liczbami z zakresu [1, 100]: ")))
-    print(f"długość listy: {len(lista)}, lista przed modyfikacją: {lista}")
+    print(f"długość listy: {len(lista)}, lista przed modyfikacji: {lista}")
 
-    wstawianie_zera_do_listy(jest_pierwsza)  # wywołanie funkcji w celu wtsawienia zera do listy
+    listaLiczbPierwszych = []
+    for liczba in lista:
+        if jest_pierwsza(liczba):
+            listaLiczbPierwszych.append(liczba)
+
+    wstawianie_zera_do_listy(listaLiczbPierwszych)  # wywołanie funkcji w celu wstawienia zera do listy
     print(f"długość listy: {len(lista)}, lista po modyfikacją: {lista}")
+
+    # lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 0]  # Jeżeli na końcu jest zero. Co wtedy?
 
     print(sumowanie_podzbiorow_listy())
