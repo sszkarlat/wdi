@@ -13,8 +13,9 @@ def otwieranie_pliku(plik):
 
 def liczenie_zdan_w_tekscie():
     tekst = " ".join(otwieranie_pliku("przykladowy_tekst.txt"))
-    liczbaZdan = len(re.findall(r'\.', tekst))
+    liczbaZdan = len(re.findall(r'[.!?]+', tekst))
+
     return liczbaZdan
 
 
-print(liczenie_zdan_w_tekscie())
+print("Liczba zdań w tekście wynosi:", liczenie_zdan_w_tekscie())
