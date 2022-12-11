@@ -37,8 +37,7 @@ def Algorytm_Euklidesa(liczba1, liczba2):
         print("Nieprawdiłowe dane wejściowe! Podaj liczby naturalne dodatnie!")
 
 
-print("""Podaj dwie liczby naturalne dodatnie, w celu policzenia NWD, z wykorzystaniem Algorytmu Euklidesa.
-Przyjęto, w tym programie, że liczby naturalne zaczynają się od 1!""")
+print("Podaj dwie liczby naturalne dodatnie, w celu policzenia NWD, z wykorzystaniem Algorytmu Euklidesa.")
 while True:
     try:
         Reszta = []
