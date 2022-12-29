@@ -1,4 +1,4 @@
-Link do mojej strony: [link]()
+Link do mojej strony: [link](https://sszkarlat.github.io/wdi/)
 
 Gra w Python - Pacman - https://www.youtube.com/watch?v=9H27CimgPsQ
 
