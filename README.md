@@ -1,3 +1,5 @@
+Link do mojej strony: 
+
 Gra w Python - Pacman - https://www.youtube.com/watch?v=9H27CimgPsQ
 
 Zadania:
