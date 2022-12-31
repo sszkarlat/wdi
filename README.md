@@ -1,4 +1,4 @@
-Link do mojej strony: [link](https://sszkarlat.github.io/wdi/)
+Link do mojej strony: [kliknij link](https://sszkarlat.github.io/wdi/)
 
 Zadania, które przed naszą grupą - Grupa2 - do wykonania w najbliższym czasie:
 1) Zrobić narzędzia z WDI
