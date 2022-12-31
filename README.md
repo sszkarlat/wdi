@@ -12,5 +12,5 @@ Popuplarna gra Pacman, z jej głównym bohaterem
 Inspiracje i pomysły przy tworzeniu projektu można czerpać z wielu źródeł o to jedno z nich:
 [link_PACMAN_na_YouTube](https://www.youtube.com/watch?v=9H27CimgPsQ)
 
-![gra_Pacman](https://user-images.githubusercontent.com/115925925/210133699-911181f2-91cf-45d8-8bd3-a21119599075.png)
+![gra_Pacman](https://user-images.githubusercontent.com/115925925/210133732-ca74fdc4-b73b-4a51-b799-720de45034ca.png)
 
