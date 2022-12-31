@@ -8,4 +8,4 @@ Zadania:
 3) Współpraca w celu stworzenia projektu
 
 Popuplarna gra Pacman, z jej głównym bohaterem
-![pacman][width:20%](https://user-images.githubusercontent.com/115925925/208948378-f8e41e11-ca14-4524-ba77-5be53782d11a.jpg)
+![pacman](https://user-images.githubusercontent.com/115925925/208948378-f8e41e11-ca14-4524-ba77-5be53782d11a.jpg)
