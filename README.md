@@ -10,4 +10,5 @@ Zadania:
 Popuplarna gra Pacman, z jej głównym bohaterem
 
 
-![pacman](https://user-images.githubusercontent.com/115925925/210133417-532fb01a-5836-47ab-914a-2527e11591ed.png)
+
+![pacman](https://user-images.githubusercontent.com/115925925/210133456-89287b59-daf0-48e0-bc10-2ad26a8a117e.png)
