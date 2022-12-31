@@ -6,7 +6,8 @@ Zadania, które przed naszą grupą - Grupa2 - do wykonania w najbliższym czasi
 3) Współpraca w celu stworzenia projektu
 
 Wraz z moją grupą - Grupa2 - chcielibyśmy zrealizować projekt, jakim jest napisanie kultowej gry - Pacman!
-Popuplarna gra Pacman, z jej głównym bohaterem
+
+Popularna gra Pacman, z jej głównym bohaterem
   ![pacman](https://user-images.githubusercontent.com/115925925/210133484-67ddf3f1-1fb7-4000-82cf-b5088110fdff.png)
 
 Inspiracje i pomysły przy tworzeniu projektu można czerpać z wielu źródeł o to jedno z nich:
