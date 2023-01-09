@@ -101,7 +101,7 @@ def test_quadratic_zeros3():
 
 
 class TestQuadraticZeros(unittest.TestCase):
-    # Test dla delty równej 0, kiedy mamy tylko jedno miejsce zerowe
+    # Test dla delty równej 0, kiedy mamy tylko jedno miejsce zerowe 
     def test_quadratic_zeros1(self):
         a = ComplexNumber(1, 0)
         b = ComplexNumber(2, 0)
