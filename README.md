@@ -1,5 +1,7 @@
 Link do mojej strony: [kliknij link](https://sszkarlat.github.io/wdi/)
 
+Link do Link do repozytorium: [link do fork]()
+
 Zadania, które przed naszą grupą - Grupa2 - do wykonania w najbliższym czasie:
 1) Zrobić narzędzia z WDI
 2) Zrobić zadania z programowania z WDI
