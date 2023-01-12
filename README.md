@@ -1,6 +1,6 @@
 Link do mojej strony: [kliknij link](https://sszkarlat.github.io/wdi/)
 
-Link do Link do repozytorium: [link do fork]()
+Link do Link do repozytorium: [link do fork](https://github.com/sszkarlat/deep_complex_networks.git)
 
 Zadania, które przed naszą grupą - Grupa2 - do wykonania w najbliższym czasie:
 1) Zrobić narzędzia z WDI
