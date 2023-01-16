@@ -1,4 +1,4 @@
-Link do mojej strony: [kliknij link](https://sszkarlat.github.io/wdi/)
+Link do mojej strony: [kliknij link](https://sszkarlat.github.io/)
 
 Link do Link do repozytorium: [link do fork](https://github.com/sszkarlat/deep_complex_networks.git)
 
